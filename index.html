@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet"/>
   <link rel="stylesheet" href="CSS/invie.css"/>
   <!-- <link rel="stylesheet"  media="(max-width: 800px)"href="CSS/media.css"/> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 </head>
 
 <body>
@@ -19,7 +20,8 @@
         <!-- logotipo -->
         <img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
       </figure>
-      <nav class="menu">
+      <span class="hamburger-button icon-menu" id="burger-button"></span>
+      <nav class="menu" id="menu">
         <!-- menu -->
         <ul>
           <li>
@@ -87,7 +89,7 @@
                   <input type="text" required name="nombre" value="" id="nombre"/>
 
                 <label for="email"> e-mail </label>
-                    <input type="text" required name="email" value="" id="email"/>
+                    <input type="email" required name="email" value="" id="email"/>
 
               <div class="sexo">
                 <label for="mujer">
@@ -125,6 +127,14 @@
     </div>
   </div>
   </footer>
+  <script type="text/javascript">
+    var $burguerButton = document.getElementById('burger-button');
+    var $menu = document.getElementById('menu');
+    $burguerButton.addEventListener('touchstart', function(){
+      $menu.classList.toggle("active")
+    });
+
+  </script>
 </body>
 
 </html>

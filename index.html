@@ -47,8 +47,12 @@
   </section>
   <section id="guitarras" class="guitarras contenedor"> <!-- Guitarras -->
     <h2>Nuestras Guitarras</h2> <!-- Titulo -->
+    <div class="video-responsive-caja">
+    <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+    </div>
+
     <article class="guitarra">  <!-- Guitarra 1 -->
-      <img class="derecha" src="images/invie-acustica.png" alt="Invie Acustica" width="350">
+      <img class="derecha" data-src="images/invie-acustica.png" alt="Invie Acustica" width="350">
 
       <div class="contenedor-guitarra-a">
         <h3 class="title-b">Invie Acustica</h3>
@@ -60,7 +64,7 @@
       </div>
     </article>
     <article class="guitarra b">  <!-- Guitarra 2 -->
-      <img class="izquierda" src="images/invie-classic.png" alt="Guitarra clasica" width="350">
+      <img class="izquierda" data-src="images/invie-classic.png" alt="Guitarra clasica" width="350">
       <div class="contenedor-guitarra-b">
         <h3 class="title-b">Invie Classic</h3>
         <ol>
@@ -74,7 +78,7 @@
   <footer class="footer">     <!-- Footer -->
     <div class="contenedor">
       <div class="contacto">
-        <img src="images/invie-white.png" alt="invie">
+        <img data-src="images/invie-white.png" alt="invie">
         <!-- <div class="contenedor-contacto"> -->
           <a href="tel:+573166254985"> <strong>Teléfono</strong> <span> 3166254985</span>  </a>
         <!-- </div> -->
@@ -127,12 +131,36 @@
     </div>
   </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
   <script type="text/javascript">
-    var $burguerButton = document.getElementById('burger-button');
-    var $menu = document.getElementById('menu');
-    $burguerButton.addEventListener('touchstart', function(){
-      $menu.classList.toggle("active")
-    });
+  var consulta = window.matchMedia("(max-width:500px)");
+ consulta.addListener(mediaQuery);
+ var $burguerButton = document.getElementById('burger-button');
+ var $menu = document.getElementById('menu');
+
+ function toggleMenu(){
+   $menu.classList.toggle("active");
+   $burguerButton.classList.toggle("icon-close");
+ };
+
+  function mediaQuery() {
+    if (consulta.matches) {
+      console.log("es verdad");
+      $burguerButton.addEventListener('touchstart', toggleMenu );
+    }
+    else {
+     console.log("es falso");
+     // $burguerButton.removeEventListener('touchstart', toggleMenu );
+    }
+  }
+
+mediaQuery();
+
+      var bLazy = new Blazy({
+          selector: "img"
+      });
+
+
 
   </script>
 </body>

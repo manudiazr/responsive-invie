@@ -128,11 +128,28 @@
   </div>
   </footer>
   <script type="text/javascript">
-    var $burguerButton = document.getElementById('burger-button');
-    var $menu = document.getElementById('menu');
-    $burguerButton.addEventListener('touchstart', function(){
-      $menu.classList.toggle("active")
-    });
+  var consulta = window.matchMedia("(max-width:500px)");
+ consulta.addListener(mediaQuery);
+ var $burguerButton = document.getElementById('burger-button');
+ var $menu = document.getElementById('menu');
+
+ function toggleMenu(){
+   $menu.classList.toggle("active")
+ };
+
+  function mediaQuery() {
+    if (consulta.matches) {
+      console.log("es verdad");
+      $burguerButton.addEventListener('touchstart', toggleMenu );
+    }
+    else {
+     console.log("es falso");
+     // $burguerButton.removeEventListener('touchstart', toggleMenu );
+    }
+  }
+
+mediaQuery();
+
 
   </script>
 </body>

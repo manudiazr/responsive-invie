@@ -410,9 +410,10 @@ input:focus, textarea:focus {
     }
     .menu{
       background-color: rgba(254, 51, 78,0.8);
-      position: absolute;
+      position: absolute ;
       left: -100%;
       top: 0;
+      
       right: 0;
       bottom: 0;
       z-index: 2;

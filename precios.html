@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <title> Precios de tus mejores guitarras!!</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="CSS/invie.css"/>
   <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet"/>
+  <link rel="stylesheet" href="CSS/invie.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 </head>
 
 <body>
@@ -15,7 +15,8 @@
       <!-- logotipo -->
       <img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
     </figure>
-    <nav class="menu">
+    <span class="hamburger-button icon-menu" id="burger-button"></span>
+    <nav class="menu" id="menu">
       <!-- menu -->
       <ul>
         <li>
@@ -31,29 +32,52 @@
     </nav>
     </div>
   </header>
-  <section class="contenedor">
-    <table class="table">
-      <thead>
-        <th>Modelo</th>
-        <th>Precio</th>
-        <th>Descripción</th>
-      </thead>
-      <tbody>
-        <td>invie clasic</td>
-        <td>$100.000</td>
-        <td> Es una guitarra muy cool</td>
-      </tbody>
-      <tbody>
-        <td>invie clasic</td>
-        <td>$100.000</td>
-        <td> Es una guitarra muy cool</td>
-      </tbody>
-      <tbody>
-        <td>invie clasic</td>
-        <td>$100.000</td>
-        <td> Es una guitarra muy cool</td>
-      </tbody>
-    </table>
+  <section class="tabla">
+    <div class="contenedor">
+      <table class="table">
+        <thead>
+          <th>Modelo</th>
+          <th>Precio</th>
+          <th>Descripción</th>
+          <th>Modelo</th>
+          <th>Precio</th>
+          <th>Descripción</th>
+        </thead>
+        <tbody>
+          <td>invie clasic</td>
+          <td>$100.000</td>
+          <td> Es una guitarra muy cool</td>
+          <td>invie clasic</td>
+          <td>$100.000</td>
+          <td> Es una guitarra muy cool</td>
+        </tbody>
+        <tbody>
+          <td>invie clasic</td>
+          <td>$100.000</td>
+          <td> Es una guitarra muy cool</td>
+          <td>invie clasic</td>
+          <td>$100.000</td>
+          <td> Es una guitarra muy cool</td>
+        </tbody>
+        <tbody>
+          <td>invie clasic</td>
+          <td>$100.000</td>
+          <td> Es una guitarra muy cool</td>
+          <td>invie clasic</td>
+          <td>$100.000</td>
+          <td> Es una guitarra muy cool</td>
+        </tbody>
+        <tbody>
+          <td>invie clasic</td>
+          <td>$100.000</td>
+          <td> Es una guitarra muy cool</td>
+          <td>invie clasic</td>
+          <td>$100.000</td>
+          <td> Es una guitarra muy cool</td>
+        </tbody>
+      </table>
+    </div>
+
   </section>
   <footer class="footer">     <!-- Footer -->
     <div class="contenedor">
@@ -110,5 +134,37 @@
     </div>
   </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+  <script type="text/javascript">
+  var consulta = window.matchMedia("(max-width:500px)");
+ consulta.addListener(mediaQuery);
+ var $burguerButton = document.getElementById('burger-button');
+ var $menu = document.getElementById('menu');
+
+ function toggleMenu(){
+   $menu.classList.toggle("active");
+   $burguerButton.classList.toggle("icon-close");
+ };
+
+  function mediaQuery() {
+    if (consulta.matches) {
+      console.log("es verdad");
+      $burguerButton.addEventListener('touchstart', toggleMenu );
+    }
+    else {
+     console.log("es falso");
+     // $burguerButton.removeEventListener('touchstart', toggleMenu );
+    }
+  }
+
+mediaQuery();
+
+      var bLazy = new Blazy({
+          selector: "img"
+      });
+
+
+
+  </script>
 </body>
 </html>

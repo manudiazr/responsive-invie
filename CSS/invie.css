@@ -306,6 +306,7 @@ input:focus, textarea:focus {
   left: 20px;
   cursor: pointer;
   z-index: 3;
+  color: white;
 }
 .video-responsive-caja {
   position: relative;
@@ -323,6 +324,12 @@ input:focus, textarea:focus {
 }
 
 @media screen and (max-width: 800px) {
+
+/* precios */
+.tabla .contenedor {
+  overflow: auto;
+}
+/* precios */
  /* portada */
   .titulo {
     font-size: 45px;
@@ -420,6 +427,12 @@ input:focus, textarea:focus {
 
   @media screen and (max-width:500px) {
     .portada .contenedor {
+      position: static;
+    }
+    .header.p{
+      position: static;
+    }
+    .header .contenedor{
       position: static;
     }
     .menu{

@@ -223,7 +223,7 @@ input:focus, textarea:focus {
   top: -90px;
 }
 
-.header.p {
+.header.background {
   background-image: url("../images/background.png");
   background-size: cover;
   position: relative;
@@ -289,9 +289,9 @@ input:focus, textarea:focus {
   margin-top: 10px;
 }
 
-.table {
+.tabla {
   margin: 60px 0;
-  ma
+
 }
 .hamburger-button {
   width: 40px;
@@ -326,8 +326,13 @@ input:focus, textarea:focus {
 @media screen and (max-width: 800px) {
 
 /* precios */
+.tabla {
+  margin: 50px 20px;
+}
+
 .tabla .contenedor {
   overflow: auto;
+  border: 1px solid #273b47;
 }
 /* precios */
  /* portada */
@@ -429,7 +434,7 @@ input:focus, textarea:focus {
     .portada .contenedor {
       position: static;
     }
-    .header.p{
+    .header.background {
       position: static;
     }
     .header .contenedor{

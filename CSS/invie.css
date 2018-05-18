@@ -515,7 +515,8 @@ margin-bottom: 70px;
       background-color: #3A586B;
       background-image: url("../images/background2x.png");
       background-size: cover;
-
-
-    }
+  }
+  .opened {
+	overflow: hidden;
+}
   }

@@ -156,6 +156,7 @@
  };
  function toggleMenu(){
    $menu.classList.toggle("active");
+   document.body.classList.toggle('opened');
    $burguerButton.classList.toggle("icon-close");
  };
 
@@ -181,7 +182,7 @@ mediaQuery();
       gestos.on('swipeleft', closeMenu);
       gestos.on('swiperight', openMenu);
 
-
+      
   </script>
 </body>
 

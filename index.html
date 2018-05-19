@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <title> Invie - tus mejores guitarras!!</title>
   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <!-- <link rel="stylesheet"  media="(max-width: 800px)"href="CSS/media.css"/> -->
-      <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet"/>
+      <!-- <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet"/> -->
   <style>
-
-
+    @font-face{font-family:'icomoon';src:url('fonts/icomoon.eot?n0opa2');src:url('fonts/icomoon.eot?n0opa2#iefix') format('embedded-opentype'),url('fonts/icomoon.ttf?n0opa2') format('truetype'),url('fonts/icomoon.woff?n0opa2') format('woff'),url('fonts/icomoon.svg?n0opa2#icomoon') format('svg');font-weight:normal;font-style:normal}[class*=" icon-"]{font-family:'icomoon'!important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-menu:before{content:"\e9bd"}body{font-family:'Allerta',sans-serif;margin:0}.logotipo{margin-left:0}.menu{font-size:24px;position:absolute;right:0}.menu a{color:white;text-decoration:none}.menu li{margin-left:30px}.menu li::before{content:"∘";font-size:50px;line-height:20px;color:white}.portada{background-image:url("images/background.png");background-size:cover;color:white;padding:20px;height:500px}.portada button{margin-bottom:70px}.button{border-radius:12px;color:white;border:none;padding:7px 20px;font-size:18px;background:linear-gradient(to left,#fe344e,#ff7250)}.titulo{font-size:70px;font-family:'Montserrat',sans-serif;font-weight:bold;margin-bottom:0;margin-top:70px}.titulo span{text-decoration:underline}.title-a{font-size:24px;margin-top:0;margin-left:5px}.contenedor{max-width:800px;margin:auto;position:relative}.guitarras{color:#1F313C;margin-bottom:60px}.guitarras h2{font-size:35px}.logotipo,.menu,.menu li{display:inline-block}.hamburger-button{width:40px;border-radius:50%;line-height:40px;height:40px;background:#365365;display:none;text-align:center;position:fixed;top:20px;left:20px;z-index:3;color:white}.video-responsive-contenedor{margin-bottom:70px}.video-responsive-borde{border:2px solid #5f6c74;margin:auto 10px;;}.video-responsive-caja{position:relative;padding-top:56.4%}.video-responsive-src{position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%}@media screen and (max-width:800px){.titulo{font-size:45px;margin-top:30px}.title-a{font-size:18px}.portada{height:auto}.portada .button{margin-top:30px;display:inline-block}.video-responsive-contenedor{margin-bottom:10px}.guitarras{text-align:center}}@media screen and (max-width:767px){@media screen and (max-width:650px){.header{text-align:center}.logotipo{margin:0}.menu{display:block;position:static}.menu li:first-child{margin:0}.menu ul{padding:0}}@media screen and (max-width:500px){.portada .contenedor{position:static}.hamburger-button{display:inline-block}.menu{background-color:rgba(254,51,78,0.8);position:absolute;left:-100%;top:0;position:fixed;right:0;bottom:0;z-index:2;display:flex;width:100%;align-items:center}.menu ul{flex:1}.menu li{display:block;margin:0;border-bottom:1px solid white;padding:8px 0}.menu li::before{display:none}.menu li:first-child{border-top:1px solid white}.portada{text-align:center}.titulo{font-size:30px}.title-a{font-size:16px;margin:10px}}@media screen and (-webkit-min-device-pixel-ratio:2){.portada{background-color:#3A586B;background-image:url("images/background2x.png");background-size:cover}}}
   </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 </head>
-
 <body>
-
-
   <section id="portada" class="portada">
     <!-- Portada -->
     <header id="header" class="header contenedor">     <!-- header -->
@@ -140,6 +135,14 @@
     </div>
   </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Allerta::latin', 'Montserrat:400,700:latin'] 
+    }
+  });
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script type="text/javascript">
@@ -187,6 +190,7 @@ mediaQuery();
 
 
   </script>
+
   <link rel="stylesheet" href="CSS/invie.css"/>
 </body>
 

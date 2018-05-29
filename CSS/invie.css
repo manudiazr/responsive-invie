@@ -331,6 +331,14 @@ margin-bottom: 70px;
   width: 100%;
   height: 100%;
 }
+.guitarra img, .footer img{
+  transition: 1s;
+  opacity: 0;
+
+}
+img.b-loaded{
+  opacity: 1;
+}
 
 @media screen and (max-width: 800px) {
 
